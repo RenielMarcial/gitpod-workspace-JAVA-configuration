@@ -1,18 +1,26 @@
 import java.sql.*;
 public class Contact {
     public static void main (String args[]){
-        try{
-            Class.forName("com.mysql.jdbc.Driver");  
-            Connection con=DriverManager.getConnection(  
-            "jdbc:mysql://localhost:3306/my_db","root","root");  
-            //here my_db is database name, root is username and password  
-            Statement stmt=con.createStatement();  
-            ResultSet rs=stmt.executeQuery("select * from contact");  
-            while(rs.next())  
-                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
-                con.close();  
-        }catch(Exception e){ 
-            System.out.println(e);
+
+        System.out.println("Loading driver...");
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("Driver loaded!");
+        } catch (ClassNotFoundException e) {
+            throw new IllegalStateException("Cannot find the driver in the classpath!", e);
+        }
+
+        String url = "jdbc:mysql://localhost:3306/javaDB";
+        String username = "root";
+        String password = "";
+
+        System.out.println("Connecting database...");
+
+        try (Connection connection = DriverManager.getConnection(url, username, password)) {
+            System.out.println("Database connected!");
+        } catch (SQLException e) {
+            throw new IllegalStateException("Cannot connect the database!", e);
         }
     }
   }
