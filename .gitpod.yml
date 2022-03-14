@@ -1,2 +1,16 @@
+tasks: 
+  - init: ./mvnw package -DskipTests
+    command: java -jar target/*.jar
 image:
       file: .gitpod.Dockerfile
+ports:
+      - port: 8080
+        visibility: public
+        onOpen: open-browser
+vscode:
+  extensions:
+    - redhat.java
+    - vscjava.vscode-java-debug
+    - vscjava.vscode-java-test
+    - pivotal.vscode-spring-boot
+

@@ -1,3 +1,4 @@
+package src.main.java.com.example.demo;
 import java.sql.*;
 public class Contact {
     public static void main (String args[]){
@@ -5,7 +6,7 @@ public class Contact {
         System.out.println("Loading driver...");
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Driver loaded!");
         } catch (ClassNotFoundException e) {
             throw new IllegalStateException("Cannot find the driver in the classpath!", e);
