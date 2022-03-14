@@ -1,4 +1,4 @@
-package src.main.java.com.example.demo;
+package com.example.demo;
 import java.sql.*;
 public class Contact {
     public static void main (String args[]){
