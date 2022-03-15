@@ -19,22 +19,28 @@
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Student ID</th>
-                                <th>Student Name</th>
-                                <th>Course</th>
-                                <th>Fee</th>
+                                <th>Contact ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Age</th>
+                                <th>Salary</th>
+                                <th>Address</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr  th:each="student : ${liststudent }">
-                                <td th:text="${student.id}">Student ID</td>
-                                <td th:text="${student.studentname}">StudentName</td>
-                                <td th:text="${student.course}">Course</td>
-                                <td th:text="${student.fee}">Fee</td>
-                                <td><a th:href="@{'/edit/' + ${student.id}}">Edit</a></td>     
-                                <td><a th:href="@{'/delete/' + ${student.id}}">Delete</a></td>     
+                            <tr th:each="contact : ${listcontact }">
+                                <td th:text="${contact.contactId}">Student ID</td>
+                                <td th:text="${contact.firstName}">First Name</td>
+                                <td th:text="${contact.lastName}">Last Name</td>
+                                <td th:text="${contact.email}">Email</td>
+                                <td th:text="${contact.age}">Age</td>
+                                <td th:text="${contact.salary}">Salary</td>
+                                <td th:text="${contact.address}">Address</td>
+                                <td><a th:href="@{'/edit/' + ${contact.contactId}}">Edit</a></td>     
+                                <td><a th:href="@{'/delete/' + ${contact.contactId}}">Delete</a></td>     
                             </tr>
                         </tbody>
                     </table> 

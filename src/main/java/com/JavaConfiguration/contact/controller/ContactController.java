@@ -40,17 +40,17 @@ public class ContactController {
         return "redirect:/";
     }
  
-    @RequestMapping("/edit/{id}")
-    public ModelAndView showEditContactPage(@PathVariable(name = "id") int id) {
+    @RequestMapping("/edit/{contactId}")
+    public ModelAndView showEditContactPage(@PathVariable(name = "contactId") int contactId) {
         ModelAndView mav = new ModelAndView("new");
-        Contact std = service.get(id);
+        Contact std = service.get(contactId);
         mav.addObject("contact", std);
         return mav;
         
     }
-    @RequestMapping("/delete/{id}")
-    public String deletecontact(@PathVariable(name = "id") int id) {
-        service.delete(id);
+    @RequestMapping("/delete/{contactId}")
+    public String deletecontact(@PathVariable(name = "contactId") int contactId) {
+        service.delete(contactId);
         return "redirect:/";
     }
 }

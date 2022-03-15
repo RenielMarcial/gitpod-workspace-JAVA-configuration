@@ -20,11 +20,11 @@ public class ContactService {
         repo.save(std);
     }
     
-    public Contact get(long id) {
-        return repo.findById(id).get();
+    public Contact get(long contactId) {
+        return repo.findById(contactId).get();
     }
     
-    public void delete(long id) {
-        repo.deleteById(id);
+    public void delete(long contactId) {
+        repo.deleteById(contactId);
     }
 }
