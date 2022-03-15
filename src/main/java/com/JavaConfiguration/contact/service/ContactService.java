@@ -1,10 +1,12 @@
 package com.JavaConfiguration.contact.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.emp.domain.Contact;
-import com.example.emp.repository.ContactRepository;
+
+import com.JavaConfiguration.contact.domain.Contact;
+import com.JavaConfiguration.contact.repository.ContactRepository;
 
 @Service
 public class ContactService {
