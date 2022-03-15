@@ -9,41 +9,65 @@ import javax.persistence.Id;
 public class Contact {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
-    private String contactname;
-    private String course;
-    private int fee;
+    private Long contactId;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private int age;
+    private int salary;
+    private String address;
     public Contact() {
     
     }
-    public Contact(Long id, String contactname, String course, int fee) {
-    this.id = id;
-    this.contactname = contactname;
-    this.course = course;
-    this.fee = fee;
+    public Contact(Long contactId, String firstName, String lastName, String email, int age, int salary, String address) {
+    this.contactId = contactId;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.age = age;
+    this.salary = salary;
+    this.address = address;
     }
-    public Long getId() {
-    return id;
+    public Long getContactId() {
+    return contactId;
     }
-    public void setId(Long id) {
-    this.id = id;
+    public void setContactId(Long contactId) {
+    this.contactId = contactId;
     }
-    public String getContactname() {
-    return contactname;
+    public String getFirstName() {
+    return firstName;
     }
-    public void setContactname(String contactname) {
-    this.contactname = contactname;
+    public void setFirstName(String firstName) {
+    this.firstName = firstName;
     }
-    public String getCourse() {
-    return course;
+    public String getLastName() {
+    return lastName;
     }
-    public void setCourse(String course) {
-    this.course = course;
+    public void setLastName(String lastName) {
+    this.lastName = lastName;
     }
-    public int getFee() {
-    return fee;
+    public String getEmail() {
+    return email;
     }
-    public void setFee(int fee) {
-    this.fee = fee;
+    public void setEmail(String email) {
+    this.email = email;
+    }
+    public int getAge() {
+    return age;
+    }
+    public void setAge(int age) {
+    this.age = age;
+    }
+    public int getSalary() {
+    return salary;
+    }
+    public void setSalary(int salary) {
+    this.salary = salary;
+    }
+    public String getAddress() {
+    return address;
+    }
+    public void setAddress(String address) {
+    this.address = address;
     }
 }
