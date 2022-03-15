@@ -17,57 +17,58 @@ public class Contact {
     private int salary;
     private String address;
     public Contact() {
-    
+        super();
     }
     public Contact(Long contactId, String firstName, String lastName, String email, int age, int salary, String address) {
-    this.contactId = contactId;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
-    this.age = age;
-    this.salary = salary;
-    this.address = address;
+        super();
+        this.contactId = contactId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+        this.salary = salary;
+        this.address = address;
     }
     public Long getContactId() {
-    return contactId;
+        return contactId;
     }
     public void setContactId(Long contactId) {
-    this.contactId = contactId;
+        this.contactId = contactId;
     }
     public String getFirstName() {
-    return firstName;
+        return firstName;
     }
     public void setFirstName(String firstName) {
-    this.firstName = firstName;
+        this.firstName = firstName;
     }
     public String getLastName() {
-    return lastName;
+        return lastName;
     }
     public void setLastName(String lastName) {
-    this.lastName = lastName;
+        this.lastName = lastName;
     }
     public String getEmail() {
-    return email;
+        return email;
     }
     public void setEmail(String email) {
-    this.email = email;
+        this.email = email;
     }
     public int getAge() {
-    return age;
+        return age;
     }
     public void setAge(int age) {
-    this.age = age;
+        this.age = age;
     }
     public int getSalary() {
-    return salary;
+        return salary;
     }
     public void setSalary(int salary) {
-    this.salary = salary;
+        this.salary = salary;
     }
     public String getAddress() {
-    return address;
+        return address;
     }
     public void setAddress(String address) {
-    this.address = address;
+        this.address = address;
     }
 }
