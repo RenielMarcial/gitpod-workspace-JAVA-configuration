@@ -30,12 +30,12 @@ public class ContactController {
  
     @GetMapping("/new")
     public String add(Model model) {
-        model.addAttribute("contact", new Contact());
+        model.addAttribute("Contact", new Contact());
         return "new";
     }
  
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveContact(@ModelAttribute("contact") Contact std) {
+    public String saveContact(@ModelAttribute("Contact") Contact std) {
         service.save(std);
         return "redirect:/";
     }
@@ -44,7 +44,7 @@ public class ContactController {
     public ModelAndView showEditContactPage(@PathVariable(name = "contactId") int contactId) {
         ModelAndView mav = new ModelAndView("new");
         Contact std = service.get(contactId);
-        mav.addObject("contact", std);
+        mav.addObject("Contact", std);
         return mav;
         
     }
