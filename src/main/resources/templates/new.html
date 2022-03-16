@@ -3,7 +3,7 @@
       xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="utf-8" />
-        <title>Create New Product</title>
+        <title>Create New Contact</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
         <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
     </head>
@@ -11,7 +11,7 @@
         <div align="center">
             <h1>Create New Contact</h1>
             <br />
-            <div class="col-sm-4">
+            <div class="col-lg-6">
                 <form action="#" th:action="@{/save}" th:object="${Contact}" method="post">
                     <table>
                         <div alight="left">
@@ -64,7 +64,7 @@
                                 </td>
                             </tr>
                         </div>
-                        <br>
+                        <br><br>
                         <tr>
                             <td colspan="2"><button type="submit" class="btn btn-info">Save</button> </td>
                         </tr>
