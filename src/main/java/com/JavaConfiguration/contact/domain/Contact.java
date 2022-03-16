@@ -17,10 +17,10 @@ public class Contact {
     private int salary;
     private String address;
     public Contact() {
-        super();
+        
     }
     public Contact(Long contactId, String firstName, String lastName, String email, int age, int salary, String address) {
-        super();
+        
         this.contactId = contactId;
         this.firstName = firstName;
         this.lastName = lastName;
