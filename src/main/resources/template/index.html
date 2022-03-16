@@ -31,16 +31,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="contact : ${listcontact }">
-                                <td th:text="${contact.contactId}">Student ID</td>
-                                <td th:text="${contact.firstName}">First Name</td>
-                                <td th:text="${contact.lastName}">Last Name</td>
-                                <td th:text="${contact.email}">Email</td>
-                                <td th:text="${contact.age}">Age</td>
-                                <td th:text="${contact.salary}">Salary</td>
-                                <td th:text="${contact.address}">Address</td>
-                                <td><a th:href="@{'/edit/' + ${contact.contactId}}">Edit</a></td>     
-                                <td><a th:href="@{'/delete/' + ${contact.contactId}}">Delete</a></td>     
+                            <tr th:each="Contact : ${listcontact }">
+                                <td th:text="${Contact.contactId}">Student ID</td>
+                                <td th:text="${Contact.firstName}">First Name</td>
+                                <td th:text="${Contact.lastName}">Last Name</td>
+                                <td th:text="${Contact.email}">Email</td>
+                                <td th:text="${Contact.age}">Age</td>
+                                <td th:text="${Contact.salary}">Salary</td>
+                                <td th:text="${Contact.address}">Address</td>
+                                <td><a th:href="@{'/edit/' + ${Contact.contactId}}">Edit</a></td>     
+                                <td><a th:href="@{'/delete/' + ${Contact.contactId}}">Delete</a></td>     
                             </tr>
                         </tbody>
                     </table> 
