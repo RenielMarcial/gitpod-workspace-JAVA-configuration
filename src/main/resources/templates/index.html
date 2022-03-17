@@ -4,17 +4,31 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
         <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+        <style>
+            body {
+            font-family: 'lato', sans-serif;
+            }
+            .container {
+            max-width: 1050px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+
+            h2 {
+            font-size: 26px;
+            margin: 20px 0;
+            text-align: center;
+            }
+        </style>
     </head>
     <body>
         <div>
             <h2 >Contact Information</h2>
+            
             <tr>
-                <div align = "left" >   
-                    <h3><a  th:href="@{'/new'}">Add new</a></h3>    
-                </div>
-            </tr>
-            <tr>
-            <div class="col-md-6" align = "center">
+            <div class="container" align = "center">
                 <div class="panel-body" align = "center" >
                     <table class="table">
                         <thead class="thead-dark">
@@ -45,7 +59,9 @@
                         </tbody>
                     </table> 
                 </div>
+                <h3><a  th:href="@{'/new'}">Add new</a></h3>
             </div>
         <div>
     </body>
 </html>
+
